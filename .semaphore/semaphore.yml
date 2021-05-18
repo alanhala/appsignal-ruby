@@ -93,13 +93,11 @@ blocks:
       - name: RUBY_VERSION
         value: 2.6.6
       - name: GEMSET
-        value: no_dependencies
-      - name: BUNDLE_GEMFILE
-        value: gemfiles/no_dependencies.gemfile
+        value: diagnose
       - name: LANGUAGE
         value: ruby
       commands:
-      - spec/integration/diagnose/bin/test
+      - cd spec/integration/diagnose && bin/test
 - name: Ruby 2.0.0-p648
   dependencies:
   - Validation
