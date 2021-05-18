@@ -94,6 +94,8 @@ blocks:
         value: 2.6.6
       - name: GEMSET
         value: diagnose
+      - name: BUNDLE_GEMFILE
+        value: spec/integration/diagnose/Gemfile
       - name: LANGUAGE
         value: ruby
       commands:
