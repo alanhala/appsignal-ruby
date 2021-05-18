@@ -35,6 +35,8 @@ semaphore: # Default `.semaphore/semaphore.yml` contents
         - rm -f $HOME/.rbenv/plugins/rbenv-gem-rehash/etc/rbenv.d/exec/~gem-rehash.bash
         - sem-version ruby $RUBY_VERSION
         - ./support/check_versions
+        - git submodule init
+        - git submodule update
         - cache restore $_BUNDLER_CACHE-bundler-$RUBY_VERSION-$GEMSET-$(checksum $BUNDLE_GEMFILE)
         - cache restore $_GEMS_CACHE-gems-$RUBY_VERSION-$(checksum $BUNDLE_GEMFILE)
         - ./support/install_deps
@@ -83,10 +85,6 @@ semaphore: # Default `.semaphore/semaphore.yml` contents
       dependencies:
       - Validation
       task:
-        prologue:
-          commands:
-          - git submodule init
-          - git submodule update
         jobs:
         - name: Diagnose
           env_vars:
