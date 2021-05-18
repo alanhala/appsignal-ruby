@@ -93,7 +93,7 @@ blocks:
       - name: GEMSET
         value: diagnose
       - name: BUNDLE_GEMFILE
-        value: Gemfile
+        value: "$HOME/appsignal-ruby/spec/integration/diagnose/Gemfile"
       - name: LANGUAGE
         value: ruby
       commands:
