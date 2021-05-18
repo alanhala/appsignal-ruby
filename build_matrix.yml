@@ -93,11 +93,11 @@ semaphore: # Default `.semaphore/semaphore.yml` contents
             - name: GEMSET
               value: diagnose
             - name: BUNDLE_GEMFILE
-              value: spec/integration/diagnose/Gemfile
+              value: Gemfile
             - name: LANGUAGE
               value: ruby
           commands:
-            - cd spec/integration/diagnose && bin/test
+            - spec/integration/diagnose/bin/test
 
 matrix:
   defaults:

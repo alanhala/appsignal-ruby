@@ -93,11 +93,11 @@ blocks:
       - name: GEMSET
         value: diagnose
       - name: BUNDLE_GEMFILE
-        value: spec/integration/diagnose/Gemfile
+        value: Gemfile
       - name: LANGUAGE
         value: ruby
       commands:
-      - cd spec/integration/diagnose && bin/test
+      - spec/integration/diagnose/bin/test
 - name: Ruby 2.0.0-p648
   dependencies:
   - Validation
